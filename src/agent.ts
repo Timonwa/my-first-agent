@@ -1,6 +1,7 @@
 // src/agent.ts
-import { AgentBuilder, GoogleSearch } from "@iqai/adk";
+import { AgentBuilder, GoogleSearch, LlmAgent } from "@iqai/adk";
 import * as dotenv from "dotenv";
+import { openai } from "@ai-sdk/openai";
 
 dotenv.config();
 
@@ -18,3 +19,23 @@ export async function agent() {
     .withTools(new GoogleSearch())
     .build();
 }
+
+// export async function agent() {
+//   return await AgentBuilder.create("openai_agent")
+//     .withModel(openai("gpt-4-turbo"))
+//     .withInstruction("You are a helpful assistant")
+//     .build();
+// }
+
+// export const openaiAgent = new LlmAgent({
+//   name: "openai_agent",
+//   model: openai("gpt-4.1"),
+//   instruction: "You are a helpful assistant",
+// });
+
+// Google Gemini
+// const geminiAgent = new LlmAgent({
+//   name: "gemini_agent",
+//   model: google("gemini-2.0-flash"),
+//   instruction: "You are a helpful assistant"
+// });
