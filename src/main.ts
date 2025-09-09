@@ -4,6 +4,11 @@ import { agent } from "./agent";
 async function main() {
   const { runner } = await agent();
 
+  // const response = await runner.ask(
+  //   "What is the capital of France?"
+  // );
+  // console.log("🤖 Response:", response);
+
   const response = await runner.ask(
     "What are the latest developments in AI technology in 2024?"
   );

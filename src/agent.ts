@@ -2,8 +2,16 @@
 import { AgentBuilder, GoogleSearch, LlmAgent } from "@iqai/adk";
 import * as dotenv from "dotenv";
 import { openai } from "@ai-sdk/openai";
+import { google } from "@ai-sdk/google";
 
 dotenv.config();
+
+// export async function agent() {
+//   return await AgentBuilder.create("openai_agent")
+//     .withModel(openai("gpt-4-turbo"))
+//     .withInstruction("You are a helpful assistant")
+//     .build();
+// }
 
 export async function agent() {
   return await AgentBuilder.create("research_assistant")
@@ -20,20 +28,14 @@ export async function agent() {
     .build();
 }
 
-// export async function agent() {
-//   return await AgentBuilder.create("openai_agent")
-//     .withModel(openai("gpt-4-turbo"))
-//     .withInstruction("You are a helpful assistant")
-//     .build();
-// }
-
+// OpenAI GPT-4.1
 // export const openaiAgent = new LlmAgent({
 //   name: "openai_agent",
 //   model: openai("gpt-4.1"),
 //   instruction: "You are a helpful assistant",
 // });
 
-// Google Gemini
+// Google Gemini 2.0
 // const geminiAgent = new LlmAgent({
 //   name: "gemini_agent",
 //   model: google("gemini-2.0-flash"),
