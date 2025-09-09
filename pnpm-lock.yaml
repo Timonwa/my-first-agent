@@ -3144,7 +3144,7 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 18.19.124
+      '@types/node': 24.3.1
       form-data: 4.0.4
 
   '@types/node@18.19.124':
